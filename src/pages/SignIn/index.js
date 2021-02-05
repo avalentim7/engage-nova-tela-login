@@ -1,14 +1,16 @@
 import React from 'react';
 
-import { Container, Content, Background, GroupButton, LabelFloat, Infos } from './styles';
+import { Container, Content, Background, GroupButton, LabelFloat } from './styles';
 
-import { FiLock, FiFacebook, FiActivity } from 'react-icons/fi'
+import { FiFacebook, FiPlus } from 'react-icons/fi'
+import { FcAndroidOs, FcGoogle, FcNext } from 'react-icons/fc'
 
-import logoImg from '../../assets/logo.png';
+import logoImg from '../../assets/logo_scania.png';
 
 const SignIn = () => (
   <>
     <Container>
+        <span>2.8.40</span>
       <Content>
         <img src={logoImg} alt="Logotipo" />
 
@@ -25,24 +27,23 @@ const SignIn = () => (
           </LabelFloat>
 
           <GroupButton>
-            <button class="facebook" type="button"><FiFacebook /></button>
-            <button class="google" type="button"><FiActivity /></button>
-            <button class="sso" type="button"><FiLock /></button>
+            <button class="facebook" type="button"><FiFacebook size="20" color="white" /></button>
+            <button class="google" type="button"><FcGoogle size="20" /></button>
+            <button class="sso" type="button"><FcAndroidOs size="20" /></button>
           </GroupButton>
 
           <a href="/">Esqueci minha senha</a>
           <button type="submit">
-            <FiFacebook size="20"></FiFacebook>
+            <FcNext size="20"></FcNext>
           </button>
         </form>
 
         <a href="/">
-          <FiLock />
+          <FiPlus />
           Cadastre-se
           </a>
 
       </Content>
-
       <Background />
     </Container>
   </>
